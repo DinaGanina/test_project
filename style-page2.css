@@ -1,0 +1,51 @@
+/* Основные стили */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #9c8d8d;
+}
+
+/* Контейнер для контента */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для заголовка */
+h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Стили для параграфов */
+p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+/* Специальный стиль для первого параграфа */
+p:first-of-type {
+    font-weight: bold;
+    color: #3498db;
+}
+
+/* Стиль для второго параграфа */
+p:nth-of-type(2) {
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+/* Эффект при наведении */
+p:hover {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+}
