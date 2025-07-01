@@ -1,0 +1,98 @@
+/* Основные стили с плавными переходами */
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    color: #4a4e69;
+    transition: all 0.3s ease-out;
+}
+
+/* Контейнер с улучшенной тенью и градиентной рамкой */
+.content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #4361ee, #3a0ca3);
+}
+
+/* Анимированный заголовок */
+h1 {
+    color: #14213d;
+    padding-bottom: 12px;
+    margin-bottom: 1.8rem;
+    position: relative;
+    font-weight: 700;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #4361ee, #7209b7);
+    transition: width 0.4s ease;
+}
+
+h1:hover::after {
+    width: 120px;
+}
+
+/* Стили для параграфов с тонкой анимацией */
+p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    border-left: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+p:hover {
+    transform: translateX(4px);
+    border-left: 2px solid #4361ee;
+    padding-left: 1.2rem;
+}
+
+/* Специальные стили параграфов */
+p:first-of-type {
+    font-weight: 600;
+    color: #4361ee;
+    font-size: 1.15rem;
+}
+
+p:nth-of-type(2) {
+    font-style: italic;
+    color: #6c757d;
+    position: relative;
+}
+
+p:nth-of-type(2)::before {
+    content: '"';
+    font-size: 1.5em;
+    color: #adb5bd;
+    margin-right: 4px;
+}
+
+/* Эффект при наведении на весь контейнер */
+.content:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
